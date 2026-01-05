@@ -11,7 +11,7 @@ I focus on **protecting enterprise systems and networks from advanced threats** 
 ## 🚀 Project Highlights
 
 ### SOC & Security Automation
-- [Automated SOAR/EDR Tines-LimaCharlie Integration](https://github.com/rukevweOvuowo/Automated-SOAR-EDR-Tines-LimaCharlie-Integration) – Integrated automation to accelerate threat detection and response.  
+- [Automated SOAR-EDR ](https://github.com/rukevweOvuowo/Automated-SOAR-EDR) – Integrated automation to accelerate threat detection and response.  
 - [ELK Stack SOC Lab](https://github.com/rukevweOvuowo/ELK-Stack-SOC-Lab) – Built a SOC environment with dashboards for log analysis.  
 - [SSH Log Analysis in Splunk](https://github.com/rukevweOvuowo/SSH-Log-Analysis-in-Splunk-for-Detecting-Suspicious-Login-Activity) – Detect suspicious login activity and anomalies.
 
