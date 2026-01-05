@@ -17,11 +17,11 @@ My work focuses on **protecting enterprise systems and networks from advanced th
 - **[Active Directory Telemetry Lab](https://github.com/rukevweOvuowo/Active-directory-telemetry-lab)** — Investigated authentication behavior and ATT&CK-aligned event monitoring.  
 - **[SOC Automation with Wazuh](https://github.com/rukevweOvuowo/soc-automation-wazuh)** — Credential-dumping detection (Mimikatz) and automated alert workflows.  
 - **[Network Traffic Analysis – Web Shell Detection](https://github.com/rukevweOvuowo/network-traffic-analysis-web-shell)** — Identified malicious traffic patterns through packet inspection.
+- **[Active Directory Telemetry Lab](https://github.com/rukevweOvuowo/Active-directory-telemetry-lab)** — Simulated MITRE ATT&CK techniques and lateral-movement detection.
 
 ---
 
-### ⚔️ Pentesting & Vulnerability Research
-- **[Active Directory Telemetry Lab](https://github.com/rukevweOvuowo/Active-directory-telemetry-lab)** — Simulated MITRE ATT&CK techniques and lateral-movement detection.  
+### ⚔️ Pentesting & Vulnerability Research  
 - **[Hardware Security & Side-Channel Attack Lab](https://github.com/rukevweOvuowo/Hardware-Security--and-Side-Channel-attack-LAB)** — Explored side-channel attacks and evaluated defensive countermeasures.
 
 ---
