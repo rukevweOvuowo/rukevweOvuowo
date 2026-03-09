@@ -1,0 +1,18 @@
+name: Update README with Repos
+
+on:
+  schedule:
+    - cron: '0 0 * * *' # runs daily
+  workflow_dispatch:
+
+jobs:
+  update-readme:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: techgaun/github-readme-projects@v1
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          file: README.md
+          section_title: "## 🚀 Project Highlights"
+          display_limit: 10
