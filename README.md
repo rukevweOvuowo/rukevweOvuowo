@@ -1,4 +1,4 @@
-# 👋 Hi, I’m Rukevwe Ovuowo
+# 👋 Hi, I’m Ovuowo Rukevwe 
 
 I’m a hands-on **Cybersecurity Engineer** specializing in **SOC automation, penetration testing, AI/ML security, and 5G/6G network security**.  
 I focus on **protecting enterprise systems and networks from advanced threats** through practical labs, threat simulations, and real-world testing.
