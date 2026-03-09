@@ -1,4 +1,4 @@
-# I’m **Rukevwe Ovuowo**
+# 👋 I’m **Rukevwe Ovuowo**
 
 I’m a hands-on **Cybersecurity Engineer** specializing in **IoT security, SOC automation, and penetration testing**.  
 I focus on **protecting enterprise systems and networks from advanced threats** through practical labs, threat simulations, and real-world testing.  
@@ -10,14 +10,12 @@ I focus on **protecting enterprise systems and networks from advanced threats** 
 
 ---
 
-## Tools & Platforms I’ve Worked With
+## 🛠 Tools & Platforms I’ve Worked With
 
 - **SIEM & Monitoring:** Microsoft Sentinel (KQL), Splunk, Wazuh, Elastic Stack, Sysmon  
 - **Penetration Testing & Vulnerability Assessment:** Metasploit, Nmap, Burp Suite, Web Application Testing Tools  
-- **Networking & Traffic Analysis:** Wireshark, tcpdump, Network Packet Inspection, Web Shell Detection  
 - **IoT & Embedded Security:** ESP32 Security Labs, AES-128 CTR, HMAC, MQTT Security  
-- **Programming & Automation:** Python, Bash, C/C++, SQL, SOAR Pipelines, Automated Alert Workflows  
-- **Directory & Authentication Analysis:** Active Directory Telemetry, Credential Dumping Detection (Mimikatz)
+- **Programming & Automation:** Python, Bash, C/C++, SQL, SOAR Pipelines, Automated Alert Workflows 
 
 ---
 
