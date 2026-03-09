@@ -1,34 +1,31 @@
-# 👋 Hi, I’m Ovuowo Rukevwe 
+# I’m **Rukevwe Ovuowo**
 
-I’m a hands-on **Cybersecurity Engineer** specializing in **SOC automation, penetration testing, AI/ML security, and 5G/6G network security**.  
-I focus on **protecting enterprise systems and networks from advanced threats** through practical labs, threat simulations, and real-world testing.
+I’m a hands-on **Cybersecurity Engineer** specializing in **IoT security, SOC automation, and penetration testing**.  
+I focus on **protecting enterprise systems and networks from advanced threats** through practical labs, threat simulations, and real-world testing.  
 
-📫 **Connect with me:**  
+ I hold a **Master’s degree in Cybersecurity** and have worked on a variety of security projects spanning SOC operations, IoT security, penetration testing, and threat monitoring.
+
+ **Connect with me:**  
 [LinkedIn](https://www.linkedin.com/in/rukevwe-ovuowo) • [Email](mailto:rukevwe10@gmail.com)
 
 ---
 
-## 🛠 Cybersecurity Tools & Platforms
+## Tools & Platforms I’ve Worked With
 
-I’ve worked with a variety of tools for monitoring, SOC, and analysis:  
-
-**SIEM & Log Analysis:** Microsoft Sentinel, Splunk, Wazuh, ELK Stack  
-**Monitoring & Endpoint:** Sysmon, Azure Monitoring Agent  
-**Penetration Testing & Network Analysis:** Nmap, Wireshark, Metasploit, Burp Suite  
-**Automation & SOAR:** Automated detection pipelines, EDR integrations  
-**Programming & Scripting:** Python, Bash, C/C++, SQL  
-
----
-
-## 🚀 Labs & Projects
-
-I’ve completed hands-on labs and projects covering SOC automation, threat detection, vulnerability research, and IoT/5G security.  
-
-You can explore all my projects here:  
-[**All Repositories**](https://github.com/rukevweOvuowo?tab=repositories)
+- **SIEM & Monitoring:** Microsoft Sentinel (KQL), Splunk, Wazuh, Elastic Stack, Sysmon  
+- **Penetration Testing & Vulnerability Assessment:** Metasploit, Nmap, Burp Suite, Web Application Testing Tools  
+- **Networking & Traffic Analysis:** Wireshark, tcpdump, Network Packet Inspection, Web Shell Detection  
+- **IoT & Embedded Security:** ESP32 Security Labs, AES-128 CTR, HMAC, MQTT Security  
+- **Programming & Automation:** Python, Bash, C/C++, SQL, SOAR Pipelines, Automated Alert Workflows  
+- **Directory & Authentication Analysis:** Active Directory Telemetry, Credential Dumping Detection (Mimikatz)
 
 ---
 
-## ⚡ Fun Fact
+## Labs & Projects
 
-I love **building automated security tools**, **simulating real-world attacks**, and **analyzing live telemetry** to improve detection and mitigation strategies.
+I’ve built and tested multiple labs covering SOC operations, IoT security, and threat detection. **Full list of projects and labs can be seen in my repositories:**  
+[https://github.com/rukevweOvuowo?tab=repositories](https://github.com/rukevweOvuowo?tab=repositories)
+
+
+
+**Passion:** Continuously building hands-on cybersecurity labs and exploring new techniques to strengthen enterprise security.
