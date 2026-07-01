@@ -8,13 +8,6 @@ Skilled in **KQL (Kusto Query Language)**, log analysis, and Azure security envi
 
 ---
 
-## Live Portfolio
-
-👉 **Visit my website:**  
-https://rukevweOvuowo.github.io
-
----
-
 ## Skills
 
 - Microsoft Sentinel  
