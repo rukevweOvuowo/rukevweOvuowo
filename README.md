@@ -1,16 +1,50 @@
-## Hi there 👋
+# SOC Analyst Portfolio – Rukevwe Ovuowo
 
-<!--
-**rukevweOvuowo/rukevweOvuowo** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+## About Me
 
-Here are some ideas to get you started:
+SOC Analyst specialising in security monitoring, threat detection, and incident investigation using **Microsoft Sentinel** and **Microsoft Defender XDR**.
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+Skilled in **KQL (Kusto Query Language)**, log analysis, and Azure security environments.
+
+---
+
+## Live Portfolio
+
+👉 **Visit my website:**  
+https://rukevweOvuowo.github.io
+
+---
+
+## Skills
+
+- Microsoft Sentinel  
+- Microsoft Defender XDR  
+- KQL (Kusto Query Language)  
+- SIEM / SOAR  
+- Threat Hunting  
+- Incident Response  
+- Log Analysis  
+- Azure Security  
+
+---
+
+## 📁 Featured Project
+
+**Microsoft Sentinel Security Operations**
+
+- Configured SIEM monitoring in Azure
+- Built KQL detection queries
+- Investigated security incidents
+- Analyzed suspicious login activity
+
+---
+
+## Contact
+
+- Email: rukevwe10@gmail.com  
+- LinkedIn: https://linkedin.com/in/rukevwe-ovuowo  
+- Website: https://rukevweOvuowo.github.io  
+
+---
+
+> All security monitoring and incident work is based on Microsoft Sentinel & Defender XDR environments.
