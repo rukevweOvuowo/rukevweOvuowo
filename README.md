@@ -1,7 +1,5 @@
 # Hybrid Microsoft Sentinel SOC Detection & Response Laboratory
 
-https://github.com/rukevweOvuowo/Hybrid-Microsoft-Sentinel-SOC-Detection-Response-Laboratory
-
 ## Overview
 
 This project documents the design and implementation of a hybrid Security Operations Center (SOC) laboratory built around Microsoft Sentinel, Microsoft Defender XDR, endpoint telemetry, network monitoring, and security automation.
