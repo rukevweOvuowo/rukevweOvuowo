@@ -234,6 +234,7 @@ Example:
 
 ```bash
 nmap -sV <target-ip>
+```
 
 
 ## Detection Sources
@@ -242,34 +243,6 @@ nmap -sV <target-ip>
 - Suricata alerts
 - Microsoft Sentinel analytics rules
 
-
----
-
-# Attack Simulation
-
-The environment was tested using controlled adversary simulations to validate detection capabilities, telemetry collection, and SOC investigation workflows.
-
----
-
-# 1. Network Reconnaissance
-
-## Tool
-
-- Nmap
-
-
-## Activities
-
-- Port scanning
-- Service enumeration
-- Network discovery
-
-
-## Detection Sources
-
-- Zeek connection logs
-- Suricata IDS alerts
-- Microsoft Sentinel analytics rules
 
 ---
 
@@ -284,14 +257,14 @@ OWASP Juice Shop
 
 - SQL injection testing
 - HTTP attack simulation
-- Suspicious web request generation
 
 
 ## Detection Sources
 
 - Zeek HTTP logs
 - Suricata IDS alerts
-- Microsoft Sentinel investigations
+- Sentinel investigations
+
 
 ---
 
@@ -301,14 +274,14 @@ OWASP Juice Shop
 
 - Brute-force authentication attempts
 - Failed login simulations
-- Suspicious authentication behaviour
 
 
 ## Detection Sources
 
 - Windows Security Events
 - Microsoft Defender telemetry
-- Microsoft Sentinel analytics rules
+- Sentinel analytics rules
+
 
 ---
 
@@ -318,77 +291,97 @@ OWASP Juice Shop
 
 - Suspicious PowerShell execution
 - Malicious process simulation
-- File and process activity monitoring
 
 
 ## Detection Sources
 
 - Sysmon events
-- Microsoft Defender XDR alerts
-- Microsoft Sentinel incidents
+- Defender XDR alerts
+- Sentinel incidents
+
 
 ---
 
-# 5. Phishing Simulation
+# Detection Engineering
 
-## Objective
+Custom Microsoft Sentinel analytics rules were developed using KQL to identify suspicious activities across endpoint, authentication, and network telemetry.
 
-Simulate phishing-related activity and investigate the resulting endpoint and identity telemetry.
+Detection examples:
+
+---
+
+## Network Reconnaissance Detection
+
+Detects:
+
+- Port scanning activity
+- Suspicious connection patterns
 
 
-## Activities
+Data Sources:
 
+- Zeek
+- Suricata
+
+
+---
+
+## Brute Force Detection
+
+Detects:
+
+- Multiple failed authentication attempts
+- Potential credential attacks
+
+
+Data Sources:
+
+- Windows Security Events
+- Microsoft Sentinel
+
+
+---
+
+## Phishing Simulation
+
+
+Detects:
 - Suspicious email activity simulation
 - Malicious link analysis
 - User execution behaviour analysis
 
 
-## Detection Sources
+Data Sources:
 
 - Microsoft Defender XDR
 - Microsoft Sentinel incidents
 - Identity telemetry
 - Endpoint activity logs
+---
+
+## Suspicious PowerShell Detection
+
+Detects:
+
+- Suspicious PowerShell execution
+- Encoded commands
+- Abnormal command-line activity
 
 
-## Investigation Focus
+Data Sources:
 
-- User activity analysis
-- Suspicious indicators
-- Related endpoint events
-- Authentication activity
+- Sysmon
+- Defender XDR
 
 ---
 
-# 6. Malware Detection Simulation
+## Malware Detection
 
-## Objective
-
-Validate endpoint monitoring capabilities by analysing malware-like behaviour and security telemetry.
-
-
-## Activities
-
+Detects:
 - Suspicious process execution
 - Abnormal command execution
 - File creation activity
 - Network connection monitoring
-
-
-## Detection Sources
-
-- Microsoft Defender for Endpoint
-- Microsoft Defender XDR
-- Sysmon telemetry
-- Microsoft Sentinel incidents
-
-
-## Investigation Focus
-
-- Process execution chain
-- File activity
-- Network connections
-- Indicators of compromise (IOCs)
 
 ---
 
@@ -407,25 +400,66 @@ Automation workflows include:
 Workflow:
 
 ```
-Attack Simulation
-        |
-        |
-Generated telemetry
-        |
-        |
-Detection Rules
-        |
-        |
-Sentinel Alerts
-        |
-        |
-Investigation
-        |
-        |
-SOAR Automation
+Sentinel Alert
+
+      |
+
+Analytics Rule Trigger
+
+      |
+
+Automation Rule
+
+      |
+
+Logic App Playbook
+
+      |
+
+Notification / Enrichment
+
+      |
+
+Investigation Workflow
 ```
 
 ---
+
+# Incident Investigation Workflow
+
+Security incidents were investigated using a structured SOC workflow:
+
+```
+Alert Generated
+
+        |
+
+Alert Validation
+
+        |
+
+Evidence Collection
+
+        |
+
+Telemetry Correlation
+
+        |
+
+Attack Timeline Reconstruction
+
+        |
+
+MITRE ATT&CK Mapping
+
+        |
+
+Response Actions
+
+        |
+
+Incident Documentation
+```
 
 
 Investigation sources:
@@ -455,6 +489,8 @@ Hybrid-SOC-Microsoft-Sentinel-Lab
 │   ├── reconnaissance.md
 │   ├── brute-force.md
 │   ├── sql-injection.md
+    ├── phishing-simulation.md
+    └── malware-detection.md
 │   └── powershell.md
 │
 ├── Detection-Rules
@@ -471,8 +507,11 @@ Hybrid-SOC-Microsoft-Sentinel-Lab
 │   ├── incident-001.md
 │   └── incident-002.md
 │
+├── MITRE-Mapping
+│   └── techniques.md
 │
 └── Images
+```
 
 ---
 
