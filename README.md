@@ -1,6 +1,6 @@
 # Hybrid Microsoft Sentinel SOC Detection & Response Laboratory
 
-![SOC Architecture](Architecture/soc-architecture.png)
+https://github.com/rukevweOvuowo/Hybrid-Microsoft-Sentinel-SOC-Detection-Response-Laboratory
 
 ## Overview
 
@@ -18,10 +18,6 @@ The purpose of this lab was to simulate an enterprise SOC environment where secu
 The environment combines Azure cloud services with VMware-based security monitoring infrastructure to replicate a hybrid enterprise security architecture.
 
 ---
-
-# Architecture
-
-![SOC Architecture](Architecture/soc-architecture.png)
 
 ## Environment Components
 
@@ -219,7 +215,9 @@ Microsoft Sentinel
 
 # Attack Simulation
 
-The environment was tested using controlled adversary simulations to validate detection capabilities.
+The environment was tested using controlled adversary simulations to validate security monitoring, detection engineering, and incident investigation capabilities.
+
+The objective was to generate realistic security events, collect telemetry from multiple sources, develop detections, and investigate incidents using Microsoft Sentinel and Defender XDR.
 
 ---
 
@@ -238,7 +236,6 @@ Example:
 
 ```bash
 nmap -sV <target-ip>
-```
 
 
 ## Detection Sources
@@ -247,6 +244,34 @@ nmap -sV <target-ip>
 - Suricata alerts
 - Microsoft Sentinel analytics rules
 
+
+---
+
+# Attack Simulation
+
+The environment was tested using controlled adversary simulations to validate detection capabilities, telemetry collection, and SOC investigation workflows.
+
+---
+
+# 1. Network Reconnaissance
+
+## Tool
+
+- Nmap
+
+
+## Activities
+
+- Port scanning
+- Service enumeration
+- Network discovery
+
+
+## Detection Sources
+
+- Zeek connection logs
+- Suricata IDS alerts
+- Microsoft Sentinel analytics rules
 
 ---
 
@@ -261,14 +286,14 @@ OWASP Juice Shop
 
 - SQL injection testing
 - HTTP attack simulation
+- Suspicious web request generation
 
 
 ## Detection Sources
 
 - Zeek HTTP logs
 - Suricata IDS alerts
-- Sentinel investigations
-
+- Microsoft Sentinel investigations
 
 ---
 
@@ -278,14 +303,14 @@ OWASP Juice Shop
 
 - Brute-force authentication attempts
 - Failed login simulations
+- Suspicious authentication behaviour
 
 
 ## Detection Sources
 
 - Windows Security Events
 - Microsoft Defender telemetry
-- Sentinel analytics rules
-
+- Microsoft Sentinel analytics rules
 
 ---
 
@@ -295,71 +320,77 @@ OWASP Juice Shop
 
 - Suspicious PowerShell execution
 - Malicious process simulation
+- File and process activity monitoring
 
 
 ## Detection Sources
 
 - Sysmon events
-- Defender XDR alerts
-- Sentinel incidents
-
-
----
-
-# Detection Engineering
-
-Custom Microsoft Sentinel analytics rules were developed using KQL to identify suspicious activities across endpoint, authentication, and network telemetry.
-
-Detection examples:
+- Microsoft Defender XDR alerts
+- Microsoft Sentinel incidents
 
 ---
 
-## Network Reconnaissance Detection
+# 5. Phishing Simulation
 
-Detects:
+## Objective
 
-- Port scanning activity
-- Suspicious connection patterns
+Simulate phishing-related activity and investigate the resulting endpoint and identity telemetry.
 
 
-Data Sources:
+## Activities
 
-- Zeek
-- Suricata
+- Suspicious email activity simulation
+- Malicious link analysis
+- User execution behaviour analysis
 
+
+## Detection Sources
+
+- Microsoft Defender XDR
+- Microsoft Sentinel incidents
+- Identity telemetry
+- Endpoint activity logs
+
+
+## Investigation Focus
+
+- User activity analysis
+- Suspicious indicators
+- Related endpoint events
+- Authentication activity
 
 ---
 
-## Brute Force Detection
+# 6. Malware Detection Simulation
 
-Detects:
+## Objective
 
-- Multiple failed authentication attempts
-- Potential credential attacks
-
-
-Data Sources:
-
-- Windows Security Events
-- Microsoft Sentinel
+Validate endpoint monitoring capabilities by analysing malware-like behaviour and security telemetry.
 
 
----
+## Activities
 
-## Suspicious PowerShell Detection
-
-Detects:
-
-- Suspicious PowerShell execution
-- Encoded commands
-- Abnormal command-line activity
+- Suspicious process execution
+- Abnormal command execution
+- File creation activity
+- Network connection monitoring
 
 
-Data Sources:
+## Detection Sources
 
-- Sysmon
-- Defender XDR
+- Microsoft Defender for Endpoint
+- Microsoft Defender XDR
+- Sysmon telemetry
+- Microsoft Sentinel incidents
 
+
+## Investigation Focus
+
+- Process execution chain
+- File activity
+- Network connections
+- Indicators of compromise (IOCs)
 
 ---
 
@@ -378,66 +409,25 @@ Automation workflows include:
 Workflow:
 
 ```
-Sentinel Alert
-
-      |
-
-Analytics Rule Trigger
-
-      |
-
-Automation Rule
-
-      |
-
-Logic App Playbook
-
-      |
-
-Notification / Enrichment
-
-      |
-
-Investigation Workflow
+Attack Simulation
+        |
+        |
+Generated telemetry
+        |
+        |
+Detection Rules
+        |
+        |
+Sentinel Alerts
+        |
+        |
+Investigation
+        |
+        |
+SOAR Automation
 ```
 
 ---
-
-# Incident Investigation Workflow
-
-Security incidents were investigated using a structured SOC workflow:
-
-```
-Alert Generated
-
-        |
-
-Alert Validation
-
-        |
-
-Evidence Collection
-
-        |
-
-Telemetry Correlation
-
-        |
-
-Attack Timeline Reconstruction
-
-        |
-
-MITRE ATT&CK Mapping
-
-        |
-
-Response Actions
-
-        |
-
-Incident Documentation
-```
 
 
 Investigation sources:
@@ -448,18 +438,6 @@ Investigation sources:
 - Zeek logs
 - Suricata alerts
 - Authentication logs
-
----
-
-# MITRE ATT&CK Coverage
-
-| Technique | Activity |
-|---|---|
-| T1046 | Network Service Scanning |
-| T1110 | Brute Force |
-| T1059.001 | PowerShell |
-| T1190 | Exploit Public-Facing Application |
-| T1071 | Application Layer Protocol |
 
 ---
 
@@ -495,15 +473,8 @@ Hybrid-SOC-Microsoft-Sentinel-Lab
 │   ├── incident-001.md
 │   └── incident-002.md
 │
-├── MITRE-Mapping
-│   └── techniques.md
 │
-└── Screenshots
-    ├── sentinel-dashboard.png
-    ├── defender-alerts.png
-    ├── zeek-logs.png
-    └── suricata-alerts.png
-```
+└── Images
 
 ---
 
