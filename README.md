@@ -4,7 +4,7 @@
 
 The repository is organized around security domains, detection engineering, incident investigations, and response activities.
 
-```text
+```
 Hybrid-SOC-Microsoft-Sentinel-Lab
 │
 ├── README.md
@@ -142,14 +142,13 @@ Hybrid-SOC-Microsoft-Sentinel-Lab
 │   └── Threat-Hunting-Queries.md
 │
 └── Documentation
-
+```
 
 
 
 ## Platform & Tools
 
 The SOC laboratory was built using:
-
 - Microsoft Sentinel – SIEM platform for log ingestion, detection engineering, alerting, and investigation.
 - Microsoft Defender XDR – Endpoint detection, incident correlation, and threat investigation.
 - Azure Log Analytics Workspace – Centralized security telemetry storage.
