@@ -150,14 +150,14 @@ Hybrid-SOC-Microsoft-Sentinel-Lab
 
 The SOC laboratory was built using:
 
-- **Microsoft Sentinel** – SIEM platform for log ingestion, detection engineering, alerting, and investigation.
-- **Microsoft Defender XDR** – Endpoint detection, incident correlation, and threat investigation.
-- **Azure Log Analytics Workspace** – Centralized security telemetry storage.
-- **Kusto Query Language (KQL)** – Detection rules and threat hunting queries.
-- **Microsoft Defender for Endpoint** – Endpoint telemetry and malware investigation.
-- **Zeek** – Network security monitoring and HTTP/DNS/connection telemetry.
-- **Suricata IDS** – Network intrusion detection and threat signatures.
-- **Nginx Logs** – Web application access monitoring.
-- **OWASP Juice Shop** – Vulnerable web application used for attack simulation.
-- **Kali Linux** – Security testing and attack simulation environment.
-- **Ubuntu Linux** – Web server and security monitoring sensor.
+- Microsoft Sentinel – SIEM platform for log ingestion, detection engineering, alerting, and investigation.
+- Microsoft Defender XDR – Endpoint detection, incident correlation, and threat investigation.
+- Azure Log Analytics Workspace – Centralized security telemetry storage.
+- Kusto Query Language (KQL) – Detection rules and threat hunting queries.
+- Microsoft Defender for Endpoint – Endpoint telemetry and malware investigation.
+- Zeek – Network security monitoring and HTTP/DNS/connection telemetry.
+- Suricata IDS – Network intrusion detection and threat signatures.
+- Nginx Logs – Web application access monitoring.
+- OWASP Juice Shop – Vulnerable web application used for attack simulation.
+- Kali Linux – Security testing and attack simulation environment.
+- Ubuntu Linux – Web server and security monitoring sensor.
