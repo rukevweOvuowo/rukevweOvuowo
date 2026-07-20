@@ -1,475 +1,163 @@
 # Hybrid Microsoft Sentinel SOC Detection & Response Laboratory
 
-## Overview
+## Project Structure
 
-This project documents the design and implementation of a hybrid Security Operations Center (SOC) laboratory built around Microsoft Sentinel, Microsoft Defender XDR, endpoint telemetry, network monitoring, and security automation.
+The repository is organized around security domains, detection engineering, incident investigations, and response activities.
 
-The purpose of this lab was to simulate an enterprise SOC environment where security analysts can:
-
-- Collect and analyze security telemetry
-- Monitor endpoint and network activity
-- Detect adversary behavior
-- Investigate security incidents
-- Develop KQL-based detection rules
-- Automate response workflows using SOAR capabilities
-
-The environment combines Azure cloud services with VMware-based security monitoring infrastructure to replicate a hybrid enterprise security architecture.
-
----
-
-## Environment Components
-
-## SIEM Platform
-
-### Microsoft Sentinel
-
-Microsoft Sentinel is used as the central SIEM platform for:
-
-- Security event collection
-- Analytics rules
-- Incident management
-- Threat hunting
-- Investigation workflows
-- KQL-based detections
-
----
-
-# Endpoint Security
-
-## Microsoft Defender XDR
-
-Provides centralized visibility and correlation across security data sources.
-
-Capabilities:
-
-- Endpoint threat detection
-- Alert correlation
-- Incident investigation
-- Device timeline analysis
-
-
-## Microsoft Defender for Endpoint
-
-Deployed on Windows and Linux endpoints to provide:
-
-- Endpoint Detection and Response (EDR)
-- Security alerts
-- Device investigation
-- Threat visibility
-
-
-## Sysmon
-
-Sysmon is deployed on Windows endpoints to provide additional telemetry:
-
-- Process creation events
-- Network connections
-- File creation activity
-- Registry modifications
-- System activity monitoring
-
----
-
-# Network Security Monitoring
-
-## Zeek
-
-Zeek provides network visibility through analysis of:
-
-- Network connections
-- HTTP activity
-- DNS queries
-- Communication patterns
-
-
-## Suricata
-
-Suricata provides network intrusion detection through:
-
-- Signature-based detection
-- Suspicious traffic identification
-- IDS alerts
-
----
-
-# Lab Architecture
-
-```
-                         INTERNET
-                            |
-                            |
-                    Microsoft Azure Cloud
-                            |
-        ------------------------------------------------
-        |                                              |
- Microsoft Sentinel                         Microsoft Defender XDR
-        |                                              |
- Log Analytics Workspace                         Endpoint Telemetry
-        |
-        |
- Azure Monitor Agent
-        |
-        |
- Data Collection Rules (DCR)
-        |
-        |
- -------------------------------------------------------
-        |
-        |
-                VMware Environment
-                      |
-                Local Network
-                      |
-        --------------------------------
-        |              |               |
-        |              |               |
-
-     Kali Linux    Ubuntu Sensor    Windows 10
-     Attacker      Zeek/Suricata    Endpoint
-
-                    |
-                    |
-             Network Telemetry
-
-                    |
-                    |
-              Microsoft Sentinel
-```
-
----
-
-
----
-
-# Attack Simulation
-
-The environment was tested using controlled adversary simulations to validate security monitoring, detection engineering, and incident investigation capabilities.
-
-The objective was to generate realistic security events, collect telemetry from multiple sources, develop detections, and investigate incidents using Microsoft Sentinel and Defender XDR.
-
----
-
-# 1. Network Reconnaissance
-
-## Tool
-
-- Nmap
-
-
-## Activity
-
-Performed network discovery and service enumeration against monitored endpoints.
-
-Example:
-
-```bash
-nmap -sV <target-ip>
-```
-
-
-## Detection Sources
-
-- Zeek connection logs
-- Suricata alerts
-- Microsoft Sentinel analytics rules
-
-
----
-
-# 2. Web Application Attacks
-
-## Target
-
-OWASP Juice Shop
-
-
-## Activities
-
-- SQL injection testing
-- HTTP attack simulation
-
-
-## Detection Sources
-
-- Zeek HTTP logs
-- Suricata IDS alerts
-- Sentinel investigations
-
-
----
-
-# 3. Authentication Attacks
-
-## Activities
-
-- Brute-force authentication attempts
-- Failed login simulations
-
-
-## Detection Sources
-
-- Windows Security Events
-- Microsoft Defender telemetry
-- Sentinel analytics rules
-
-
----
-
-# 4. Endpoint Security Testing
-
-## Activities
-
-- Suspicious PowerShell execution
-- Malicious process simulation
-
-
-## Detection Sources
-
-- Sysmon events
-- Defender XDR alerts
-- Sentinel incidents
-
-
----
-
-# Detection Engineering
-
-Custom Microsoft Sentinel analytics rules were developed using KQL to identify suspicious activities across endpoint, authentication, and network telemetry.
-
-Detection examples:
-
----
-
-## Network Reconnaissance Detection
-
-Detects:
-
-- Port scanning activity
-- Suspicious connection patterns
-
-
-Data Sources:
-
-- Zeek
-- Suricata
-
-
----
-
-## Brute Force Detection
-
-Detects:
-
-- Multiple failed authentication attempts
-- Potential credential attacks
-
-
-Data Sources:
-
-- Windows Security Events
-- Microsoft Sentinel
-
-
----
-
-## Phishing Simulation
-
-
-Detects:
-- Suspicious email activity simulation
-- Malicious link analysis
-- User execution behaviour analysis
-
-
-Data Sources:
-
-- Microsoft Defender XDR
-- Microsoft Sentinel incidents
-- Identity telemetry
-- Endpoint activity logs
----
-
-## Suspicious PowerShell Detection
-
-Detects:
-
-- Suspicious PowerShell execution
-- Encoded commands
-- Abnormal command-line activity
-
-
-Data Sources:
-
-- Sysmon
-- Defender XDR
-
----
-
-## Malware Detection
-
-Detects:
-- Suspicious process execution
-- Abnormal command execution
-- File creation activity
-- Network connection monitoring
-
----
-
-# SOAR Automation
-
-Microsoft Sentinel automation workflows were developed using Azure Logic Apps.
-
-Automation workflows include:
-
-- Incident notification
-- Alert enrichment
-- Investigation support
-- Response workflow automation
-
-
-Workflow:
-
-```
-Sentinel Alert
-
-      |
-
-Analytics Rule Trigger
-
-      |
-
-Automation Rule
-
-      |
-
-Logic App Playbook
-
-      |
-
-Notification / Enrichment
-
-      |
-
-Investigation Workflow
-```
-
----
-
-# Incident Investigation Workflow
-
-Security incidents were investigated using a structured SOC workflow:
-
-```
-Alert Generated
-
-        |
-
-Alert Validation
-
-        |
-
-Evidence Collection
-
-        |
-
-Telemetry Correlation
-
-        |
-
-Attack Timeline Reconstruction
-
-        |
-
-MITRE ATT&CK Mapping
-
-        |
-
-Response Actions
-
-        |
-
-Incident Documentation
-```
-
-
-Investigation sources:
-
-- Microsoft Sentinel incidents
-- Microsoft Defender XDR
-- Sysmon events
-- Zeek logs
-- Suricata alerts
-- Authentication logs
-
----
-
-# Repository Structure
-
-```
+```text
 Hybrid-SOC-Microsoft-Sentinel-Lab
-
 │
 ├── README.md
 │
 ├── Architecture
-│   ├── soc-architecture.png
-│   └── telemetry-flow.png
-│
-├── Attack-Simulation
-│   ├── reconnaissance.md
-│   ├── brute-force.md
-│   ├── sql-injection.md
-    ├── phishing-simulation.md
-    └── malware-detection.md
-│   └── powershell.md
-│
-├── Detection-Rules
-│   ├── nmap-detection.kql
-│   ├── brute-force-detection.kql
-│   ├── powershell-detection.kql
-│   └── sysmon-detection.kql
-│
-├── SOAR-Playbooks
-│   ├── alert-enrichment.md
-│   └── notification-workflow.md
+│   │
+│   ├── SOC-Lab-Architecture.md
+│   ├── Network-Diagram.png
+│   └── Data-Flow-Diagram.png
 │
 ├── Investigation-Reports
-│   ├── incident-001.md
-│   └── incident-002.md
+│   │
+│   ├── Phishing
+│   │   │
+│   │   └── 01-Phishing-Email-Investigation.md
+│   │
+│   ├── Authentication-Attacks
+│   │   │
+│   │   └── 02-Brute-Force-Attack-Investigation.md
+│   │
+│   ├── Web-Attacks
+│   │   │
+│   │   ├── 03-SQL-Injection-Investigation.md
+│   │   ├── 04-Cross-Site-Scripting-XSS-Investigation.md
+│   │   ├── 05-Command-Injection-Investigation.md
+│   │   ├── 06-Suspicious-File-Upload-Investigation.md
+│   │   ├── 07-Path-Traversal-Investigation.md
+│   │   ├── 08-Directory-Enumeration-Investigation.md
+│   │   └── 09-SSRF-Investigation.md
+│   │
+│   ├── Endpoint-Attacks
+│   │   │
+│   │   ├── 10-Malware-Execution-Investigation.md
+│   │   ├── 11-PowerShell-Abuse-Investigation.md
+│   │   ├── 12-Process-Injection-Investigation.md
+│   │   └── 13-Persistence-Investigation.md
+│   │
+│   ├── Network-Attacks
+│   │   │
+│   │   ├── Port-Scanning-Investigation.md
+│   │   ├── Suspicious-Network-Connection.md
+│   │   └── Command-and-Control-Investigation.md
+│   │
+│   └── Cloud-Attacks
+│       │
+│       ├── Azure-Identity-Attack-Investigation.md
+│       └── Suspicious-Cloud-Activity-Investigation.md
 │
-├── MITRE-Mapping
-│   └── techniques.md
+├── Detection-Rules
+│   │
+│   ├── Web-Attacks
+│   │   │
+│   │   ├── SQL-Injection.kql
+│   │   ├── XSS.kql
+│   │   ├── Command-Injection.kql
+│   │   ├── File-Upload-Abuse.kql
+│   │   ├── Path-Traversal.kql
+│   │   ├── Directory-Enumeration.kql
+│   │   └── SSRF.kql
+│   │
+│   ├── Authentication-Attacks
+│   │   │
+│   │   ├── Brute-Force.kql
+│   │   ├── Failed-Login-Spike.kql
+│   │   └── Suspicious-Authentication.kql
+│   │
+│   ├── Endpoint-Detection
+│   │   │
+│   │   ├── Malware-Execution.kql
+│   │   ├── PowerShell-Abuse.kql
+│   │   ├── Process-Creation.kql
+│   │   └── Persistence-Detection.kql
+│   │
+│   ├── Windows-Detection
+│   │   │
+│   │   ├── Suspicious-Logon.kql
+│   │   ├── PowerShell-Execution.kql
+│   │   ├── Registry-Persistence.kql
+│   │   └── Credential-Dumping.kql
+│   │
+│   └── Linux-Detection
+│       │
+│       ├── SSH-Brute-Force.kql
+│       ├── Privilege-Escalation.kql
+│       └── Suspicious-Command-Execution.kql
 │
-└── Images
-```
+├── Images
+│   │
+│   ├── 01-Phishing
+│   │   ├── email-analysis.png
+│   │   ├── defender-alert.png
+│   │   └── process-tree.png
+│   │
+│   ├── 02-Brute-Force
+│   │   ├── incident.png
+│   │   ├── failed-login.png
+│   │   ├── successful-login.png
+│   │   └── threat-intelligence.png
+│   │
+│   ├── 03-SQL-Injection
+│   │   ├── sentinel-alert.png
+│   │   ├── nginx-evidence.png
+│   │   ├── zeek-evidence.png
+│   │   └── suricata-evidence.png
+│   │
+│   ├── 04-XSS
+│   │   ├── sentinel-alert.png
+│   │   ├── nginx-evidence.png
+│   │   ├── zeek-evidence.png
+│   │   └── suricata-evidence.png
+│   │
+│   ├── 05-Command-Injection
+│   │   ├── sentinel-alert.png
+│   │   ├── nginx-evidence.png
+│   │   ├── zeek-evidence.png
+│   │   └── suricata-evidence.png
+│   │
+│   └── 06-File-Upload
+│       ├── sentinel-alert.png
+│       ├── nginx-evidence.png
+│       ├── zeek-evidence.png
+│       └── suricata-evidence.png
+│
+├── SOAR-Playbooks
+│   │
+│   ├── IP-Blocking.md
+│   ├── Malware-Isolation.md
+│   ├── Phishing-Response.md
+│   └── Incident-Response-Workflow.md
+│
+├── Threat-Hunting
+│   │
+│   ├── IOC-Hunting.md
+│   ├── MITRE-Technique-Hunting.md
+│   └── Threat-Hunting-Queries.md
+│
+└── Documentation
 
----
-
-# Skills Demonstrated
-
-- Microsoft Sentinel Administration
-- Microsoft Defender XDR Investigation
-- Microsoft Defender for Endpoint
-- KQL Detection Engineering
-- SOC Alert Triage
-- Incident Investigation
-- Threat Hunting
-- Sysmon Analysis
-- Zeek Network Monitoring
-- Suricata IDS Analysis
-- SOAR Automation with Azure Logic Apps
-- MITRE ATT&CK Mapping
 
 
----
 
-# Author
+## Platform & Tools
 
-**Ovuowo Rukevwe**
+The SOC laboratory was built using:
 
-Cybersecurity | SOC Analyst | Detection Engineering
-
-
-LinkedIn:
-
-https://linkedin.com/in/rukevwe-ovuowo
+- **Microsoft Sentinel** – SIEM platform for log ingestion, detection engineering, alerting, and investigation.
+- **Microsoft Defender XDR** – Endpoint detection, incident correlation, and threat investigation.
+- **Azure Log Analytics Workspace** – Centralized security telemetry storage.
+- **Kusto Query Language (KQL)** – Detection rules and threat hunting queries.
+- **Microsoft Defender for Endpoint** – Endpoint telemetry and malware investigation.
+- **Zeek** – Network security monitoring and HTTP/DNS/connection telemetry.
+- **Suricata IDS** – Network intrusion detection and threat signatures.
+- **Nginx Logs** – Web application access monitoring.
+- **OWASP Juice Shop** – Vulnerable web application used for attack simulation.
+- **Kali Linux** – Security testing and attack simulation environment.
+- **Ubuntu Linux** – Web server and security monitoring sensor.
